@@ -30,6 +30,13 @@ class TweedsController < ApplicationController
     end
   end
 
+  def destroy
+    @tweed = Tweed.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to tweeds_path }
+      format.js
+    end
+  end
 
   private
 

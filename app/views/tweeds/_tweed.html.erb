@@ -1,4 +1,7 @@
-<li class="well">
+<li class="well tweed" id="tweed_<%= tweed.id %>">
   <small>Tweed by <%= link_to tweed.user.email, user_path(tweed.user) %>:</small><br>
   <%= tweed.body %>
+  <% if user_signed_in? && current_user == tweed.user %>
+    <%= link_to '<span class="glyphicon glyphicon-trash pull-right"> </span>'.html_safe, tweed_path(tweed), method: :delete, remote: true %>
+  <% end %>
 </li>

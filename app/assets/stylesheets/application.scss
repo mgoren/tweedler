@@ -18,6 +18,9 @@
 @import 'bootswatch/cosmo/variables';
 @import 'bootstrap';
 
+body {
+  background-color: #EEDEF7;
+}
 
 .navbar-brand img {
   max-height: 50px;
@@ -30,4 +33,14 @@
 
 #tweedify-btn {
   margin-bottom: 20px;
+}
+
+#new_tweed {
+  margin-bottom: 20px;
+}
+
+.glyphicon {
+  font-size: 14px;
+  color: black;
+  display: none;
 }

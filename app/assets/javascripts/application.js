@@ -15,3 +15,11 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('.tweed').hover(function () {
+    $(this).find('.glyphicon').show();
+  }, function() {
+     $(this).find('.glyphicon').hide();
+  });
+});
