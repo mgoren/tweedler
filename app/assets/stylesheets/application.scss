@@ -15,7 +15,7 @@
  */
 
 @import 'bootstrap-sprockets';
-@import 'bootswatch/journal/variables';
+@import 'bootswatch/cosmo/variables';
 @import 'bootstrap';
 
 
@@ -25,5 +25,9 @@
 }
 
 .navbar-brand {
-  padding-top: 3px;
+  padding-top: 0px;
+}
+
+#tweedify-btn {
+  margin-bottom: 20px;
 }
