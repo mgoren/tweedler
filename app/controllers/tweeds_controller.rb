@@ -12,11 +12,21 @@ class TweedsController < ApplicationController
   def create
     @tweed = current_user.tweeds.new(tweed_params)
     if @tweed.save
-      flash[:notice] = "You Tweed Posted. Jolly Good!"
-      redirect_to tweeds_path
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "You Tweed Posted. Jolly Good!"
+          redirect_to tweeds_path
+        end
+        format.js
+      end
     else
-      flash[:error] = "Bloody hell."
-      render :new
+      respond_to do |format|
+        format.html do
+          flash[:error] = "Bloody hell."
+          render :new
+        end
+        format.js { render js: "alert('fail');" }
+      end
     end
   end
 
